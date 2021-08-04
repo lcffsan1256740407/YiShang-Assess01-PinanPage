@@ -1,0 +1,586 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-width: 1400px;
+    background-color:rgb(246,246,246);
+    height: 4000px;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+/* top -------------------------------------------------*/
+#top{
+    min-width: 100%;
+    height: 92px;
+    background-image: url("../img/top-background.jpg");
+    background-position: center;
+    position: relative;
+}
+.top-items{
+    position: absolute;
+}
+.top-logo{
+    top: 30px;
+    left: 10%;
+}
+.top-search{
+    width: 400px;
+    height: 38px;
+
+    position: relative;
+    top: 30px;
+    left: 40%;
+}
+.top-searchinput{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    border: 1px solid rgb(171, 169, 169,0.3);
+    box-shadow: 0 0 15px rgb(233, 224, 224);
+    outline: none;
+    text-indent: 20px;
+}
+.top-searchinput:focus{
+    box-shadow: 0 0 15px rgb(255,102,0);
+}
+.top-searchimg{
+    top: 0;
+    right: 0;
+    position: absolute;
+    cursor: pointer;
+}
+.top-code{
+    top: 42px;
+    right: 22%;
+} 
+.top-code span{
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(255,102,0);
+    display: block;
+    float: right;
+    margin-left: 10px;
+    margin-top: -1px;
+}
+.top-sign{
+    font-size: 14px;
+    top: 40px;
+    right: 11%;
+}
+.top-sign div{
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #ccc;
+
+    float: right;
+    margin-top: 7px;
+    margin-left: 7px;
+}
+.top-phone{
+    top: 10px;
+    right: 10%;
+    font-size: 14px;
+    width: 300px;
+}
+.top-phone span:nth-child(2){
+    margin-left: 6px;
+    color: rgb(254,97,0);
+}
+
+/* nav --------------------------------------------------------*/
+#nav{
+    min-width: 100%;
+    height: 50px;
+    background-color: rgb(255,102,0);
+    position: relative;
+}
+.nav-list{
+    width: 85%;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 17px;
+}
+.nav-list div{
+    height: 50px;
+    cursor: pointer;
+    flex-grow: 1;
+
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.nav-list div:hover{
+    background-color: rgb(255,128,1,0.8);
+}
+.nav-list > div:nth-child(1){
+    background-image: linear-gradient(to right,rgb(255,102,0), rgb(255,128,1));
+}
+/* 所有产品 */
+.nav-list div:nth-child(2) img {
+    width: 20px;
+    height: 14px;
+    margin-right: -8px;
+}
+/* 意外保险 */
+.nav-list div:nth-child(4) div {
+    position: absolute;
+    top: -20px;
+    margin-left: 72px;
+    background: url("../img/hot.png") no-repeat;
+    width: 50px;
+    height: 40px;
+}
+/* 活动中心 */
+.nav-list div:nth-child(8) img {
+    width: 18px;
+    height: 18px;
+    margin-right: -8px;
+}
+/* 我的一账通 */
+.nav-list div:nth-child(10) img{
+    margin-left: -10px;
+}
+#nav .nav-list2{
+    width: 550px;
+    background-color: white;
+
+    position: absolute;
+    left: 410px;
+    z-index: 100;
+
+    box-shadow: 0 5px 10px rgb(207, 202, 202);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    display: none;
+
+}
+#nav .nav-list2 > div{
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 15px;
+
+    border-bottom: 1px solid #eee;
+}
+#nav .nav-list2 > div >div{
+    width: 119px;
+    height: 75px;
+    overflow: hidden;
+}
+#nav .nav-list2 img{
+    width: 119px;
+    height: 75px;
+    transition: 0.5s;
+}
+#nav .nav-list2 img:hover{
+    transform:scale(1.25);
+}
+#nav .nav-list2 div:last-child div{
+    width: 165px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    border: 1px solid #eee;
+    cursor: pointer;
+}
+#nav .nav-list2 div:last-child div:hover{
+    background-color: rgb(255,119,0);
+    color: white;
+}
+
+/* content中间内容区域-------------------------------------------- */
+/* 给按钮创建动画属性 */
+@keyframes change {
+    2%{
+        background-image: linear-gradient(#fff,#fff);
+        
+        opacity: 0;
+    }
+    20%{
+        background-image: none;
+        
+        opacity: 1;
+    }
+}
+/* 精选产品 每日签到 */
+.content{
+    width: 1200px;
+    /* 居中 */
+    margin: 70px auto;
+}
+.one{
+    margin-top: 10px;
+    width: 85px;
+    height: 2px;
+    background-color: black;
+}
+.content-topimg::after{
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+}
+.content-topimg a{
+    width: 550px;
+    height: 130px;
+    display: inline-block;
+}
+.content-topimg a:nth-child(1){
+    background: url("../img/jingxuan.gif") no-repeat center;
+    background-size: cover;
+    float: left;
+}
+.content-topimg a:nth-child(2){
+    background: url("../img/qiandao.gif") no-repeat center;
+    background-size: cover;
+    float: right;
+}
+/* 健康保险标题 -----------------------------------------------------------------------*/
+.health{
+    margin-top: 120px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.health span{
+    
+    display: inline-block;
+}
+.health span:nth-child(2){
+    padding:10px 70px;
+    padding-top: -5px;
+}
+/* 健康保险主体内容头部 */
+.healthcontent{
+    box-shadow: 0 0 15px rgb(0,0,0,0.15);
+}
+.healthtop{
+    width: 100%;
+    height: 240px;
+    background: url("../img/healthtop.jpg") no-repeat ;
+    padding-top: 40px;
+    padding-left: 46px;
+}
+.healthtop p{
+    color: white;
+}
+.healthtop p:nth-child(1){
+    font-size: 50px;
+}
+.healthtop p:nth-child(2){
+    margin-top: 5px;
+    font-size: 24px;
+}
+/* 健康保险主体内容中的主体 */
+.healthbody{
+    background-color: white;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    position: relative;
+}
+
+.healthbody a{
+    display: block;
+    text-align: center;
+    overflow: hidden;
+
+    margin: 10px 0;
+
+    color: black;
+}
+.healthbody >div{
+    text-align: center;
+}
+.healthbody  .remai{
+    width: 100px;
+    height: 45px;
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: 40px;
+    background: url("../img/remai.png");
+}
+.healthbody .remai1{
+    left: 295px;
+}
+.healthbody .remai2{
+    left: 686px;
+}
+.healthbody .remai3{
+    left: 1077px;
+}
+.healthbody div span{
+    display: inline-block;
+    margin-right: 10px;
+
+    color: rgb(102,102,102);
+}
+.healthbody div span:nth-child(2){
+    color:rgb(221,221,221) ;
+}
+.healthbody div span:nth-child(3){
+    color: rgb(255,102,0);
+}
+.healthbody div a:last-child{
+    margin: 15px auto;
+    width: 140px;
+    height: 36px;
+    line-height: 36px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgb(255,128,1);
+    background-image: linear-gradient(to right,rgb(255,102,0), rgb(255,128,1));
+
+    transition: 1.2s;
+}
+.healthbody div a:last-child:hover{
+    animation: change 1.2s ease-out 1;
+    background-color: rgb(255,102,0);
+}
+.healthbody a img{
+    transition: 1s;
+}
+.healthbody a:nth-child(1){
+    width: 360px;
+    height: 200px;
+}
+.healthbody a:nth-child(2){
+    font-size: 24px;
+}
+.healthbody a:nth-child(2):hover{
+    color:rgb(46,132,202) ;
+}
+.healthbody >div a:nth-child(1):hover img{
+    transform:scale(1.1);
+}
+.healthbody .allbox{
+    width: 358px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgb(212, 208, 208);
+    
+    color: rgb(255,102,0);
+    border: 1px solid rgb(255,102,0);
+
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    transition: 0.5s;
+}
+.healthbody .allbox:hover{
+    color: white;
+    background-color: rgb(255,102,0);
+}
+
+/* 意外保险--------------------------------------- */
+.yiwai{
+    margin-top: 40px;
+}
+.yiwaitop{
+    background: url("../img/yiwaitop.jpg") no-repeat ;
+}
+
+/* ====================================================== */
+/* ====================================================== */
+/* 开始零件右边的导航栏 */
+@keyframes right {
+    0%{
+        top: 7px;
+    }
+    50%{
+        top: 5px;
+    }
+    100%{
+        top: 7px;
+    }
+}
+#rightnav{
+    background: #fff;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    position: fixed;
+
+    right: 0;
+    top: 50%;
+}
+#rightnav ul li{
+    margin-top: 3px;
+    padding: 5px;
+    text-align: center;
+}
+#rightnav ul li a{
+    display: block;
+    color: rgb(103,103,103);
+    font-size: 14px;
+}
+#rightnav span{
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 1px auto;
+}
+#rightnav .span1{
+    top: 7px;
+    left: 12px;
+    position: absolute;
+    background: url("../img/right1.png");
+}
+#rightnav .span2{
+    background: url("../img/right2.png");
+}
+#rightnav .span3{
+    background: url("../img/right3.png");
+}
+#rightnav .span4{
+    background: url("../img/right4.png");
+}
+#rightnav p:hover{
+    color: rgb(46,132,202);
+}
+#rightnav ul li i{
+    width: 40px;
+    height: 25px;
+    position: absolute;
+    background: url("../img/new.gif");
+
+    right: 6px;
+    top: -15px;
+}
+#rightnav ul li:nth-child(1):hover .span1{
+    animation: right 0.5s linear infinite;
+}
+/* ================================================= */
+/* ================================================= */
+/* 开始左边的零件导航栏 */
+#leftnav{
+    position: fixed;
+    top: 16%;
+    left: 60px;
+}
+#leftnav div{
+    width: 70px;
+    height: 70px;
+    font-size: 14px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    margin-top: 20px;
+    padding-top: 15px;
+    text-align:center;
+    background-color: white;
+
+    box-shadow: 0px 1px 6px 1px rgb(214, 212, 212);
+}
+#leftnav div:hover{
+    background-color: rgb(253,167,72);
+}
+#leftnav div:hover a p{
+    color: white;
+}
+#leftnav div a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: black;
+}
+/* ============================================================= */
+/* ============================================================= */
+/* 开始轮播图 */
+#lunbo{
+    height: 420px;
+    /* background-color: salmon; */
+}
+#lunbo ul li{
+    width: 100%;
+    position: absolute;
+
+    opacity: 0;
+    transition: 0.5s;
+}
+#lunbo ul li a{
+    display: block;
+    width: 100%;
+    height: 420px;
+}
+#lunbo ul li:nth-child(1) a{
+    background: url("../img/lunbo1.jpg");
+}
+#lunbo ul li:nth-child(2) a{
+    background: url("../img/lunbo2.jpg");
+}
+#lunbo ul li:nth-child(3) a{
+    background: url("../img/lunbo3.jpg");
+}
+#lunbo ul li:nth-child(4) a{
+    background: url("../img/lunbo4.jpg");
+}
+#lunbo ul li:nth-child(5) a{
+    background: url("../img/lunbo5.jpg");
+}
+#lunbo ul li:nth-child(6) a{
+    background: url("../img/lunbo6.jpg");
+}
+#lunbo ul li:nth-child(7) a{
+    background: url("../img/lunbo7.jpg");
+}
+/* 轮播图两箭头 */
+#lunbo .lunboleft,
+#lunbo .lunboright{
+    width: 36px;
+    height: 58px;
+    background-image: url("../img/lunbojiantou.png");
+    cursor: pointer;
+    position: absolute;
+    z-index: 999;
+}
+#lunbo .lunboleft{
+    top: 320px;
+    left: 150px;
+}
+#lunbo .lunboright{
+    background-position-x: 36px;
+
+    top: 320px;
+    right: 150px;
+}
+/* 轮播图导航点 */
+#lunbo .lunbodian{
+    width: 370px;
+    top: 530px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+}
+#lunbo .lunbodian div{
+    cursor: pointer;
+    width: 38px;
+    height: 8px;
+    background-color: white;
+    border-radius: 5px;
+}

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/three.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery-validate/1.19.3/jquery.validate.js"></script>
+    <title>平安·E生平安·重疾险(2021版)</title>
+</head>
+
+<body>
+    <div id="big">
+        <div id="tips">
+            <p>您已进入投保页面</p>
+            <p>将记录您的投保行为</p>
+            <span>5s</span>
+
+            <img src="../img2/cha.png" alt="" id="cha">
+        </div>
+
+    </div>
+    <!-- 顶部 -->
+    <div id="top">
+        <div class="topcontent">
+
+            <img src="../img/top-log.png" alt="" class="img1">
+            <p class="p1">官方客服：<i>4008895512转2(企业客户转3)</i></p>
+
+            <p class="p2"><i>登录投保更便捷!</i></p>
+            <p class="p3">
+                <a href="javascript:;">登录</a>
+                <span>|</span>
+                <a href="javascript:;">注册</a>
+            </p>
+
+            <img src="../img/top-code.png" alt="" class="img2">
+            <p class="p4">手机端</p>
+
+        </div>
+    </div>
+
+    <!-- 标题 -->
+    <h1>平安·E生平安·重疾险(2021版)</h1>
+
+    <!-- 款式选择 -->
+    <div id="select" class="box" name="nav1">
+        <ul class="ul1">
+            <li><span>保障责任</span></li>
+            <li>重大疾病保险金</li>
+            <li>重症监护室治疗保险金</li>
+            <li>健康服务大礼包</li>
+        </ul>
+
+
+        <ul class="ul2 selectul">
+            <li><span>少儿款</span></li>
+            <li>20万元</li>
+            <li>不投保</li>
+            <li>尊享</li>
+        </ul>
+
+        <ul class="ul3 selectul">
+            <li><span>基础款</span></li>
+            <li>20万元</li>
+            <li>2万元</li>
+            <li>尊享</li>
+        </ul>
+
+        <ul class="ul4 selectul">
+            <li><span>常规款</span></li>
+            <li>30万元</li>
+            <li>3万元</li>
+            <li>尊享</li>
+        </ul>
+
+        <ul class="ul5 selectul">
+            <li><span>高端款</span></li>
+            <li>60万元</li>
+            <li>5万元</li>
+            <li>尊享</li>
+        </ul>
+
+
+    </div>
+    <!-- 投保人 -->
+    <div id="people" class="box" name="nav2">
+        <div class="title">
+            <span>投保人</span>
+        </div>
+
+        <form action="" class="bxform" method="GET">
+
+            <div>
+                <span style="position: absolute;"><i>*</i> 类型</span>
+                <div>
+                    <span>个人用户</span>
+                </div>
+            </div>
+
+            <div>
+                <span><i>*</i> 姓名</span>
+                <input type="text" name="name">
+                <!-- 校验 -->
+                <label id="name-error" class="error" for="name">姓名不能为空</label>
+            </div>
+
+            <div>
+                <span style="margin-left: -17px; margin-right: 15px;">证件信息</span>
+                <select name="" id="select1">
+                    <option value="1">身份证</option>
+                    <option value="2">护照</option>
+                    <option value="3">军官证</option>
+                    <option value="4">港澳回乡证或台胞证</option>
+                </select>
+                <input type="text" class="zhengjian" name="zhengjian">
+                <!-- 校验 -->
+                <label id="zhengjian-error" class="error" for="zhengjian">身份证号不能为空</label>
+
+                <span style="margin-left:20px;"><i>*</i> 手机号码</span>
+                <input type="text" name="phone">
+                <!-- 校验 -->
+                <label id="phone-error" class="error" for="phone">手机号不能为空</label>
+            </div>
+
+            <div>
+                <span style="margin-left: -29px; margin-right: 1px;"><i>*</i> 电子邮箱</span>
+                <input type="email" name="email">
+                <!-- 校验 -->
+                <label id="email-error" class="error" for="email">请填写正确的电子邮箱</label>
+
+                <span style="margin-left:20px;"><i>*</i> 常住城市</span>
+                <!-- <input type="text" name="city"> -->
+                <select name="city" id="select2" style="border-right: 1px solid #eee;">
+                    <option value="1">浙江</option>
+                    <option value="2">天津</option>
+                    <option value="3">河北</option>
+                    <option value="4">北京</option>
+                    <option value="5">江西</option>
+                </select>
+                <!-- 校验 -->
+                <label id="city-error" class="error" for="city">请选择城市</label>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- 被保险人 -->
+    <div id="bepeople" class="box" name="nav3">
+        <div class="title">
+            <span>被保险人</span>
+        </div>
+
+        <form action="" id="form2" method="GET">
+
+            <div>
+                <span style="margin-left: -29px; margin-right: 1px;"><i>*</i> 为谁投保</span>
+                <input type="text" name="bename">
+                <!-- 校验 -->
+                <label id="bename-error" class="error" for="bename">姓名不能为空</label>
+
+                <span style="margin-left:45px;"><i>*</i> 姓名</span>
+                <input type="text" name="name2">
+                <!-- 校验 -->
+                <label id="name2-error" class="error" for="name2">姓名不能为空</label>
+            </div>
+
+            <div>
+                <span style="margin-left: -28px; margin-right: 15px;"><i>*</i> 证件信息</span>
+                <select name="" id="">
+                    <option value="1">身份证</option>
+                    <option value="2">护照</option>
+                    <option value="3">军官证</option>
+                    <option value="4">港澳回乡证或台胞证</option>
+                </select>
+                <input type="text" class="zhengjian" name="zhengjian2" id="zhengjian2">
+                <!-- 校验 -->
+                <label id="zhengjian2-error" class="error" for="zhengjian2">身份证号不能为空</label>
+                <span style="margin-left:29px;"> 手机号码</span>
+                <input type="text" name="phone2">
+                <!-- 校验 -->
+                <label id="phone2-error" class="error" for="phone2">手机号不能为空</label>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- 确认全部被保人按钮 -->
+    <button type="submit" class="makesure">确认全部被保人</button>
+
+    <!-- 保单及发票 -->
+    <div id="baodan" class="box" name="nav4">
+        <div class="title">
+            <span>保单及发票</span>
+        </div>
+
+        <p>电子保单将发送至您的邮箱（ ），电子保单具有纸质保单的效力，理赔只需电子保单号和身份证件。</p>
+        <span>你可能还需要: </span>
+        <input type="checkbox" class="baodanbtn">
+        <span style="margin-left: 0;">发票</span>
+
+        <form action="" class="fapiao" style="display: none;">
+
+            <div>
+                <span style="margin-left:-10px; margin-right: 1px;"><i>*</i> 发票类型</span>
+                <input type="email">
+            </div>
+
+            <div>
+                <span style="margin-left:-10px;"><i>*</i> 发票抬头</span>
+                <input type="text">
+            </div>
+
+        </form>
+    </div>
+
+
+    <!-- 保险期限 -->
+    <div id="bxtime" class="box" name="nav5">
+        <div class="title">
+            <span>保险期限</span>
+        </div>
+
+        <form action="">
+            <div style="margin: 20px 0;">
+                <span style="margin-left: -10px; margin-right: 1px;"><i>*</i> 生效日期</span>
+                <input type="date" class="datestart">
+
+                <span style="margin-left:20px;"><i>*</i> 失效日期</span>
+                <input type="date" readonly class="dateend">
+            </div>
+        </form>
+    </div>
+
+    <!-- 授权扣费 -->
+    <div id="sqkf" class="box" name="nav6">
+        <div class="title">
+            <span>授权扣费</span>
+        </div>
+
+        <div class="text">
+            <p style="color: black;">本人保单到期后，如申请续保，选择下面的方式进行扣费</p>
+
+            <input id="danxuan1" type="radio" checked>
+            <span id="danxuansp1">我自己缴费,不授权扣款</span><br>
+
+            <input id="danxuan2" type="radio">
+            <span id="danxuansp2">授权公司收到续保申请后, 通过缴费账户直接扣费</span>
+
+            <p>● 授权可以在<i style="font-style: normal; color: black; font-size: 15px; font-weight: bold;">平安好生活</i>app内取消授权
+            </p>
+            <p>● 产品如停售且无法升级产品时，将不能完成扣费</p>
+            <p>● 开通前请仔细阅读<a href="javascript:;" style="color: rgb(64,158,255);"> 《授权代扣服务协议》</a></p>
+            <p>● 勾选授权扣费在保单到期时不等同于自动续保，仍需您自己申请续保</p>
+        </div>
+    </div>
+
+    <!-- 页面结算 -->
+    <div id="over" class="box">
+
+        <div class="text">
+            <span>已选择:</span><span class="kuanshi">少儿款</span>
+            <br>
+            <span>被保险人数:</span><span>1人</span>
+            <br>
+
+            <input type="checkbox" class="bookname">
+            <a href="javascript:;" class="danxuana1">
+                我已阅读并同意<em>《投保声明》《投保须知》《用户须知》《平安一账通服务协议》及《保险条款》</em>
+            </a>
+            <a href="javascript:;" class="danxuana2" style="display:none;">
+                我已阅读并同意<em>《投保声明》《投保须知》《用户须知》《平安一账通服务协议》《授权代扣服务协议》及《保险条款》</em>
+            </a>
+        </div>
+
+        <div class="money">
+            <span>原价:</span><span>¥
+                <i class="kuanshiq" style="font-style: normal; color: black;">61</i>
+            </span>
+            <br>
+            <span style="margin-left: -2px;">应付金额:</span>
+            <span style="color: rgb(255,102,0); margin-left: 43px;">¥
+                <i class="kuanshiq" style="font-style: normal;">61</i>
+            </span>
+        </div>
+
+    </div>
+
+    <!-- 页面底部 -->
+    <div id="footer">
+        <p>¥<i class="kuanshiq" style="font-style: normal;">61</i> </p>
+        <span style="color: rgb(255,102,0); font-size: 20px;">元起</span>
+        <button type="submit" class="makesuresure">立即投保</button>
+    </div>
+
+    <!-- 右边导航栏 -->
+    <div id="rightnav">
+        <ul>
+            <li>
+                <a href="javascript:;">
+                    <span class="span2"></span>
+                    <p>常见问题</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <span class="span3"></span>
+                    <p>在线客服</p>
+                </a>
+            </li>
+            <li class="toTop">
+                <a href="javascript:;" class="togotop">
+                    <span class="span4"></span>
+                    <p>回到顶部</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 左边导航栏 -->
+    <div id="leftnav">
+
+        <div class="leftnav1">
+            <a href="javascript:;">
+                <p>保障</p>
+                <p>责任</p>
+            </a>
+        </div>
+
+        <div class="leftnav2" style="padding-top: 16px;">
+            <a href="javascript:;">
+                <p>投保人</p>
+            </a>
+        </div>
+
+        <div class="leftnav3">
+            <a href="javascript:;">
+                <p>被保</p>
+                <p>险人</p>
+            </a>
+        </div>
+
+        <div class="leftnav4">
+            <a href="javascript:;">
+                <p>保单</p>
+                <p>及发票</p>
+            </a>
+        </div>
+
+        <div class="leftnav5">
+            <a href="javascript:;">
+                <p>保险</p>
+                <p>期限</p>
+            </a>
+        </div>
+
+        <div class="leftnav6">
+            <a href="javascript:;">
+                <p>授权</p>
+                <p>扣费</p>
+            </a>
+        </div>
+
+    </div>
+
+    <div id="leftnavxian">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- 脚本区域 -->
+    <script src="../js/three.js"></script>
+</body>
+
+</html>

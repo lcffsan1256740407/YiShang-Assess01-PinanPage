@@ -1,0 +1,952 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-width: 1400px;
+    background-color:rgb(246,246,246);
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+/* top -------------------------------------------------*/
+#top{
+    min-width: 100%;
+    height: 92px;
+    background-image: url("../img/top-background.jpg");
+    background-position: center;
+    position: relative;
+}
+.top-items{
+    position: absolute;
+}
+.top-logo{
+    top: 30px;
+    left: 10%;
+}
+.top-search{
+    width: 400px;
+    height: 38px;
+
+    position: relative;
+    top: 30px;
+    left: 40%;
+}
+.top-searchinput{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    border: 1px solid rgb(171, 169, 169,0.3);
+    box-shadow: 0 0 15px rgb(233, 224, 224);
+    outline: none;
+    text-indent: 20px;
+}
+.top-searchinput:focus{
+    box-shadow: 0 0 15px rgb(255,102,0);
+}
+.top-searchimg{
+    top: 0;
+    right: 0;
+    position: absolute;
+    cursor: pointer;
+}
+.top-code{
+    top: 42px;
+    right: 22%;
+} 
+.top-code span{
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(255,102,0);
+    display: block;
+    float: right;
+    margin-left: 10px;
+    margin-top: -1px;
+}
+.top-sign{
+    font-size: 14px;
+    top: 40px;
+    right: 11%;
+}
+.top-sign div{
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #ccc;
+
+    float: right;
+    margin-top: 7px;
+    margin-left: 7px;
+}
+.top-phone{
+    top: 10px;
+    right: 10%;
+    font-size: 14px;
+    width: 300px;
+}
+.top-phone span:nth-child(2){
+    margin-left: 6px;
+    color: rgb(254,97,0);
+}
+
+/* nav --------------------------------------------------------*/
+#nav{
+    min-width: 100%;
+    height: 50px;
+    background-color: rgb(255,102,0);
+    position: relative;
+}
+.nav-list{
+    width: 85%;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 17px;
+}
+.nav-list div{
+    height: 50px;
+    cursor: pointer;
+    flex-grow: 1;
+
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.nav-list div:hover{
+    background-color: rgb(255,128,1,0.8);
+}
+.nav-list > div:nth-child(1){
+    background-image: linear-gradient(to right,rgb(255,102,0), rgb(255,128,1));
+}
+/* 所有产品 */
+.nav-list div:nth-child(2) img {
+    width: 20px;
+    height: 14px;
+    margin-right: -8px;
+}
+/* 意外保险 */
+.nav-list div:nth-child(4) div {
+    position: absolute;
+    top: -20px;
+    margin-left: 72px;
+    background: url("../img/hot.png") no-repeat;
+    width: 50px;
+    height: 40px;
+}
+/* 活动中心 */
+.nav-list div:nth-child(8) img {
+    width: 18px;
+    height: 18px;
+    margin-right: -8px;
+}
+/* 我的一账通 */
+.nav-list div:nth-child(10) img{
+    margin-left: -10px;
+}
+#nav .nav-list2{
+    width: 550px;
+    background-color: white;
+
+    position: absolute;
+    left: 410px;
+    z-index: 100;
+
+    box-shadow: 0 5px 10px rgb(207, 202, 202);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    display: none;
+
+}
+#nav .nav-list2 > div{
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 15px;
+
+    border-bottom: 1px solid #eee;
+}
+#nav .nav-list2 > div >div{
+    width: 119px;
+    height: 75px;
+    overflow: hidden;
+}
+#nav .nav-list2 img{
+    width: 119px;
+    height: 75px;
+    transition: 0.5s;
+}
+#nav .nav-list2 img:hover{
+    transform:scale(1.25);
+}
+#nav .nav-list2 div:last-child div{
+    width: 165px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    border: 1px solid #eee;
+    cursor: pointer;
+}
+#nav .nav-list2 div:last-child div:hover{
+    background-color: rgb(255,119,0);
+    color: white;
+}
+/* 开始零件右边的导航栏 -------------------------------*/
+@keyframes right {
+    0%{
+        top: 7px;
+    }
+    50%{
+        top: 5px;
+    }
+    100%{
+        top: 7px;
+    }
+}
+#rightnav{
+    background: #fff;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    position: fixed;
+
+    right: 0;
+    top: 50%;
+}
+#rightnav ul li{
+    margin-top: 3px;
+    padding: 5px;
+    text-align: center;
+}
+#rightnav ul li a{
+    display: block;
+    color: rgb(103,103,103);
+    font-size: 14px;
+}
+#rightnav span{
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 1px auto;
+}
+#rightnav .span1{
+    top: 7px;
+    left: 12px;
+    position: absolute;
+    background: url("../img/right1.png");
+}
+#rightnav .span2{
+    background: url("../img/right2.png");
+}
+#rightnav .span3{
+    background: url("../img/right3.png");
+}
+#rightnav .span4{
+    background: url("../img/right4.png");
+}
+#rightnav p:hover{
+    color: rgb(46,132,202);
+}
+#rightnav ul li i{
+    width: 40px;
+    height: 25px;
+    position: absolute;
+    background: url("../img/new.gif");
+
+    right: 6px;
+    top: -15px;
+}
+#rightnav ul li:nth-child(1):hover .span1{
+    animation: right 0.5s linear infinite;
+}
+
+/* 页面大图部分------------------------------------ */
+#bigimg{
+    width: 100%;
+    height: 420px;
+    background:url("../img2/bigimg.jpg") no-repeat center;
+}
+
+/* 页面中间描述部分------------------------------------------- */
+/* 开头第一栏 */
+#descrition{
+    width: 100%;
+    background-color: white;
+}
+#descrition .destop{
+    width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgb(231, 228, 228);
+
+    font-size: 15px;
+    padding:  10px 0;
+}
+#descrition .destop a{
+    color:  rgb(46,132,202);
+}
+#descrition span{
+    line-height: 15px;
+}
+
+/* 第二栏----------------------------------------------------- */
+#descrition .desbottom{
+    width: 1200px;
+    margin: 15px auto;
+    padding-bottom: 25px;
+    position: relative;
+}
+#descrition span{
+    display: inline-block;
+    margin:  10px 0;
+}
+#descrition .desbottom .title{
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: bold;
+    color: rgb(102,102,102);
+}
+#descrition .desbottom .des{
+    font-size: 14px;
+    color: rgb(102,102,102);
+    line-height: 14px;
+}
+#descrition .desbottom .price{
+    position: absolute;
+    top: 30px;
+    right: 0;
+}
+#descrition .desbottom .price span{
+    font-size: 22px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0;
+    color: rgb(102,102,102);
+}
+#descrition .desbottom .price a{
+    width: 178px;
+    height: 50px;
+    border-radius: 6px;
+    background-color: rgb(255,102,51);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    margin-left: 75px;
+    float: right;
+}
+#descrition .desbottom .price a:hover{
+    background-color:rgb(255,51,0);
+}
+
+/* 页面ul------------------------------------------------------- */
+#pageul{
+    width: 1200px;
+    margin: 50px auto;
+    margin-bottom: 0;
+    color: rgb(102,102,102);
+    font-size: 22px;
+    font-weight: bold;
+    background-color: white;
+    display: flex;
+    justify-content: start;
+}
+#pageul li{
+    width: 210px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+#pageul li:nth-child(1){
+    background-color: rgb(255,98,0);
+    color: #fff;
+}
+/* pagelist1保障计划-------------------------------------------- */
+#pagelist1{
+    width: 1200px;
+    margin: 1px auto;
+    border-top: 2px solid rgb(255,98,0);
+    background-color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    display: table;
+}
+#pagelist1 ul{
+    width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: start;
+    color: rgb(102,102,102);
+}
+#pagelist1 ul li{
+    width: 188px;
+    height: 50px;
+    background-color: rgb(207,227,227);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#pagelist1 .list1{
+    color: #fff;
+    background-color: rgb(96,198,198);
+}
+table{
+    width: 1120px;
+    margin: 0 auto;
+    text-align: center;
+}
+table th{
+    background-color: rgb(237,247,248);
+    height: 38px;
+    line-height: 38px; 
+    padding: 10px;
+    border: 1px solid  rgb(207,227,227);
+    color: rgb(102,102,102);
+}
+table td{
+    height: 38px;
+    line-height: 38px; 
+    border: 1px solid  rgb(207,227,227);
+    padding: 2px;
+    color: rgb(102,102,102);
+    font-size: 14px;
+
+    
+}
+#pagelist1 p{
+    width: 1120px;
+    margin: 25px auto;
+    font-size: 14px;
+    color: rgb(102,102,102); 
+}
+#pagelist1 p a{
+    color:rgb(46,132,202)
+}
+#pagelist1 p i{
+    font-style: normal;
+    color: rgb(255,98,0);
+}
+#pagelist1 .span1{
+    width: 100px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    display: block;
+    padding:5px 7px;
+    border-top-right-radius:10px ;
+    border-bottom-left-radius:10px ;
+    margin-left: 40px;
+
+    background-color: rgb(254,97,0);
+}
+#pagelist1 .span2{
+    display: block;
+    font-size: 14px;
+    color: rgb(102,102,102); 
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+/* pagelist2产品特色 */
+#pagelist2{
+    width: 1200px;
+    height: 3650px;
+    margin: 1px auto;
+    border-top: 2px solid rgb(255,98,0);
+    background: url("../img2/pagelist2.jpg");
+
+    display: none;
+}
+
+/* pagelist3投保须知 */
+#pagelist3{
+    width: 1200px;
+    margin: 1px auto;
+    border-top: 2px solid rgb(255,98,0);
+    background-color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    display: none;
+}
+#pagelist3 div{
+    width: 1120px;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 20px;
+    color: rgb(102,102,102);
+}
+#pagelist3 div i{
+    font-style: normal;
+    color: black;
+    font-weight: bold;
+}
+#pagelist3 div  em{
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* pagelist4常见问题 */
+#pagelist4{
+    width: 1200px;
+    margin: 1px auto;
+    border-top: 2px solid rgb(255,98,0);
+    background-color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    overflow: hidden;
+
+    display: none;
+}
+#pagelist4 > div{
+    width: 1120px;
+    margin: 20px auto;
+    font-size: 14px;
+    line-height: 25px;
+
+    float: left;
+    margin-left: 40px;
+}
+#pagelist4 .kehu img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    float: left;
+}
+#pagelist4 .kehu .text{
+    float: left;
+    width: 300px;
+    background-color: rgb(237,247,248);
+    border: 1px solid rgb(210,232,228);
+    border-radius: 10px;
+    padding: 25px;
+
+    margin-left: 50px;
+    margin-top: 6px;
+}
+#pagelist4 .kefu img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    float: right;
+
+    margin-top: 100px;
+}
+#pagelist4 .kefu .text{
+    float: right; 
+    width: 808px;
+    background-color: rgb(248,248,248);
+    border: 1px solid rgb(235,235,235);
+    border-radius: 10px;
+    padding: 25px;
+    margin-right: 50px;
+    margin-top: 25px;
+}
+
+
+/* 页面下方区域一------------------------------------------------- */
+#bottom1{
+    width: 1200px;
+    height:  810px;
+    margin: 40px auto;
+    background-color: #fff;
+
+    position: relative;
+}
+#bottom1 .bottom1img{
+    height: 300px;
+    background: url("../img2/bottomimg.jpg") no-repeat center;
+}
+/* 方式一 */
+#bottom1 .contact1{
+    width: 300px;
+    height: 150px;
+    top: 330px;
+    left: 200px;
+    position: relative;
+
+}
+#bottom1 span{
+    display: inline-block;
+    font-size: 15px;
+    position: absolute;
+}
+#bottom1 .contact1 span:nth-child(1),
+#bottom1 .contact2 span:nth-child(1){
+    width: 106px;
+    height: 28px;
+    background-color:  rgb(255,136,0);
+
+    font-size: 20px;
+    text-align: center;
+    line-height: 28px;
+    color: #fff;
+
+    border-top-right-radius:10px; 
+    border-bottom-left-radius: 10px;
+
+    top: 5px;
+}
+#bottom1 .number{
+    padding: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: rgb(255,136,0);
+    text-align: center;
+    line-height: 16px;
+    font-size: 12px;
+}
+#bottom1 .recommed{
+    top: 6px;
+    left: 120px;
+    position: absolute;
+}
+#bottom1 .code{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+
+    top: -10px;
+    right: -40px;
+}
+/* 方式二 */
+#bottom1 .contact2{
+    width: 300px;
+    height: 183px;
+    top: 177px;
+    left: 590px;
+    position: relative;
+
+    border-left:1px dashed  rgb(207,227,227) ;
+
+}
+#bottom1 .contact2 span:nth-child(1){
+    background-color: rgb(96,198,198);
+    left: 120px;
+}
+#bottom1 .contact2 .number{
+    background-color: rgb(96,198,198);
+}
+#bottom1 .phone{
+    position: absolute;
+    left: 250px;
+    width: 130px;
+    height: 130px;
+}
+
+/* 中心区域 */
+#bottom1 .center{
+    width: 1000px;
+    height: 280px;
+    box-shadow: 0 0 15px 2px rgb(208, 235, 238);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+
+    background-color: #fff;
+}
+
+#bottom1 .center .centertitle{
+    width: 800px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 25px;
+    text-align: center;
+}
+#bottom1 .center .centertitle .two{
+    font-size: 26px;
+    position: static;
+    margin: 5px;
+}
+#bottom1 .center .centertitle .one{
+    border:1px solid black;
+    opacity: 0.5;
+    width: 200px;
+    position: absolute;
+
+    top: 46px;
+}
+
+#bottom1 .centercontent{
+    width: 850px;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+}
+#bottom1 .centercontent > div{
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+#bottom1 .centercontent > div span{
+    height: 75px;
+    line-height: 75px;
+    display: block;
+    position: static;
+
+}
+
+/* 页面下方区域二------------------------------------------------- */
+#bottom2{
+    width: 1200px;
+    margin: 6px auto;
+    background-color: #fff;
+
+    position: relative;
+}
+#bottom2 .bottom2img{
+    width: 1200px;
+    height: 300px;
+    background: url("../img2/bottom2img.jpg") no-repeat center;
+}
+#bottom2  .btm2title{
+    width: 800px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 25px;
+    text-align: center;
+}
+#bottom2  .btm2title .two{
+    font-size: 24px;
+    position: static;
+    margin: 5px;
+}
+#bottom2  .btm2title .one{
+    border:1px solid rgb(211,183,131);
+    opacity: 0.5;
+    width: 150px;
+    position: absolute;
+
+    top: 340px;
+}
+#bottom2 .btm2dsc{
+    width: 1120px;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 45px;
+}
+#bottom2 .btm2dsc > div{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    border-right: 1px solid rgb(210,184,130,0.3);
+    padding-right: 15px;
+    margin-bottom: 60px;
+}
+#bottom2 .btm2dsc > div:last-child{
+     border: none;
+}
+#bottom2 .btm2dsc > div img{
+    margin: 10px auto;
+
+    width: 120px;
+    height: 90px;
+    position: static;
+}
+#bottom2 .btm2dsc > div span{
+    width: 200px;
+    font-size: 12px;
+    color: rgb(102,102,102);
+    position: static;
+}
+#bottom2 .btm2dsc > div p{
+    width: 200px;
+    position: static;
+}
+#bottom2 .btm2dsc > div p:nth-child(2){
+    margin-top: 5px;
+}
+#bottom2 .btm2dsc > div span:nth-child(4){
+    margin-top: 15px;
+}
+
+/* 页面下方区域三 */
+#bottom3{
+    width: 100%;
+    height: 490px;
+    background-color: #fff;
+    margin-top: 50px;
+}
+#bottom3 > div{
+     margin: 0 auto;
+     width: 1200px;
+     padding-top: 30px;
+     padding-bottom: 50px;
+     border-bottom: 1px solid rgb(220,220,220);
+
+     display: flex;
+     justify-content: space-between;
+}
+#bottom3 ul li{
+    color: rgb(50,50,50);
+    width: 146px;
+    font-size: 14px;
+    line-height: 14px;
+
+    margin-top: 15px;
+}
+#bottom3 ul li:nth-child(1){
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+}
+#bottom3 .codediv{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#bottom3 .codediv img{
+    width: 85px;
+    height: 85px;
+    margin: 5px auto;
+    margin-bottom: 10px;
+}
+#bottom3 .codediv span{
+    width: 120px;
+}
+#bottom3 .btm3phone{
+    padding-top: 6px;
+}
+#bottom3 .btm3phone i{
+    font-style: normal;
+    color: red;
+}
+#bottom3 .robot{
+    width: 91px;
+    height: 42px;
+    color: white;
+    font-size: 12px;
+    background: url("../img2/robotbac.png");
+    position: relative;
+
+    top: 10px;
+    left: 95px;
+
+    cursor: pointer;
+}
+@keyframes robot {
+    0%{
+        top: 0;
+    }
+    50%{
+        top:-3px;
+    }
+    100%{
+        top: 0;
+    }
+}
+#bottom3 .robot img{
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left:0;
+}
+#bottom3 .robot img:hover{
+    animation: robot 1s linear infinite;
+}
+#bottom3 .robot span{
+    position: absolute;
+    top: 10px;
+    left: 25px;
+}
+
+/* 最底部 */
+#bottom3 p{
+    color: rgb(102,102,102);
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 5px;
+} 
+
+/* ================================================================== */
+/* 固定定位导航栏 */
+#fixednav{
+    width: 100%;
+    height: 60px;
+    padding: 10px 0;
+    background-color: #fff;
+    color: rgb(102,102,102);
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    display: none;
+}
+#fixednav ul{
+    margin-left: 115px;
+    width: 720px;
+    height: 60px;
+
+    display: flex;
+}
+#fixednav ul li{
+    text-align: center;
+    flex-grow: 1;
+    line-height: 60px;
+    font-size: 19px;
+    font-weight: bolder;
+
+    cursor: pointer;
+}
+#fixednav ul li:nth-child(1){
+    color: rgb(255,98,0);
+    background-color: rgb(246,246,246) ;
+}
+#fixednav > div{
+    width: 390px;
+    float:right;
+    margin-top: -60px;
+    margin-right: 120px;
+
+    display: flex;
+    justify-content: space-between;
+}
+#fixednav > div .p1{
+    font-size: 20px;
+    line-height: 50px;
+}
+#fixednav > div .p1 i{
+    font-style: normal;
+    color: rgb(255,98,0);
+    font-weight: bolder;
+    font-size: 30px;
+}
+#fixednav > div .p2 a{
+    width: 100%;
+    height: 100%;
+    color: white;
+    width: 178px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgb(255,102,51);
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 5px;
+
+    display: block;
+}
+#fixednav > div .p2 a:hover{
+    background-color: rgb(255,51,0);
+}

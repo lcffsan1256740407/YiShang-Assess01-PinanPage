@@ -1,0 +1,522 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 2300px;
+    background-color: rgb(246,246,246);
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul{
+    list-style: none;
+    color: rgb(44,62,80);
+    font-size: 17px;
+}
+form{
+    margin-left: 70px;
+    font-size: 14px;
+    color: rgb(96,98,102);
+}
+form > div{
+    height: 40px;
+    line-height: 40px;
+    margin: 25px 0;
+}
+input{
+    width: 400px;
+    height: 40px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgb(220,223,230);
+
+    padding-left: 12px;
+    margin-left: 15px;
+}
+/* 顶部区域 -------------------------------------------*/
+#top{
+    width: 100%;
+    height: 70px;
+    border-bottom: 2px solid rgb(240,90,35);
+    background-color: rgb(240,240,240);
+    position: fixed;
+    top: 0;
+    z-index: 99999999999;
+}
+#top .topcontent{
+    width: 1200px;
+    margin: 0 auto;
+
+    position: relative;
+}
+#top .topcontent .img1{
+    position: absolute;
+    top: 15px;
+}
+#top .topcontent p{
+    position: absolute;
+    font-size: 14px;
+}
+#top .topcontent p i{
+    font-style: normal;
+    color: rgb(240,90,35);
+}
+#top .topcontent .p1{
+    top: 25px;
+    left: 220px;
+}
+#top .topcontent .p2{
+    top: 25px;
+    right: 230px;
+}
+#top .topcontent .p3{
+    top: 25px;
+    right: 110px;
+}
+#top .topcontent .img2{
+    position: absolute;
+    top: 25px;
+    right: 50px;
+}
+#top .topcontent .p4{
+    top: 25px;
+    right: 0;
+    font-weight: bold;
+    color: rgb(240,90,35);
+}
+#top a:hover{
+    color: rgb(240,90,35);
+}
+
+h1{
+    text-align: center;
+    margin-top: 78px; 
+    display: block;
+    color: rgb(44,62,80);
+}
+/* class box */
+.box{
+    width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 15px;
+    padding-bottom: 30px;
+}
+.box:hover{
+    box-shadow: 0 0 10px 6px #eee;
+}
+
+/* 款式选择 */
+#select{    
+    display: flex;
+    padding-bottom: 0;
+}
+#select .ul1{
+    width: 350px;
+    margin-left: 20px;
+}
+#select .ul1 li{
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid rgb(241,241,241);
+}
+
+#select ul li:first-child{
+    padding: 15px 0;
+}
+#select ul li:first-child span{
+    border-bottom: 3px solid rgb(204,204,204);
+}
+#select .selectul {
+    flex-grow: 1;
+    padding: 0 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+#select .selectul li{
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #eee;
+}
+#select .ul2{
+    background-color: rgb(255,134,55);
+    color: white;
+}
+#select .ul2 li{
+    border-bottom: 1px solid rgb(241,241,241,0.2);
+}
+#select .ul2 li:first-child span{
+    border-bottom: 3px solid #fff;
+}
+
+/* class title */
+.title{
+    padding: 20px;
+} 
+.title span{
+    border-left: 3px solid rgb(255,102,0);
+    height: 25px;
+    line-height: 25px;
+
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 12px;
+    display: block;
+}
+
+
+/* 投保人 */
+.box form > div div{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    width: 130px;
+    border-radius: 5px;
+    border: 1px solid rgb(255,102,0);
+    margin-left: 15px;
+    display: inline-block;
+
+    overflow: hidden;
+    margin-left: 58px;
+
+    background:url("../img2/dui.png") no-repeat center;
+    background-size: 25px;
+    background-position: 106px 0;
+}
+.box form select{
+    width: 100px; 
+    height: 43px; 
+    outline: none; 
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 1px solid rgb(220,223,230);
+    border-right: none;
+    color:rgb(144,147,153);
+    text-indent: 10px;
+}
+.box form #select2{
+    width: 415px; 
+    height: 43px; 
+    outline: none; 
+    border-radius: 5px;
+    border: 1px solid rgb(220,223,230);
+    color:rgb(144,147,153);
+    text-indent: 10px;
+    margin-left: 15px;
+}
+.box form .zhengjian{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: -3px;
+    width: 298px;
+}
+.box i{
+    font-style: normal;
+    color: rgb(255,102,0);
+}
+
+/* 表单校验 */
+#people,
+#bepeople{
+    position: relative;
+}
+#people label,
+#bepeople label{
+    font-size: 12px;
+    position: absolute;
+    color: rgb(255,102,0);
+    display: none;
+}
+#name-error{
+    top: 188px;
+    left: 130px;
+}
+#zhengjian-error{
+    top: 253px;
+    left: 130px;
+}
+#phone-error{
+    top: 253px;
+    left: 660px;
+}
+#email-error{
+    top: 318px;
+    left: 130px;
+}
+#city-error{
+    top: 318px;
+    left: 660px;
+}
+/* 表单2-------------- */
+#bename-error{
+    top: 122px;
+    left: 130px;
+}
+#name2-error{
+    top: 122px;
+    left: 660px;
+}
+#zhengjian2-error{
+    top: 188px;
+    left: 130px;
+}
+#phone2-error{
+    top: 188px;
+    left: 660px;
+}
+
+
+/* 确认按钮 */
+.makesure{
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid rgb(255,102,0);
+    color: rgb(255,102,0);
+    padding:10px 25px;
+    border-radius: 5px;
+
+    margin: 5px auto;
+}
+
+/* 保单以及发票 */
+#baodan p{
+    font-size: 15px; 
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#baodan > span{
+    display: inline-block;
+    font-size: 15px;
+    margin-left: 20px;
+    line-height: 15px;
+}
+#baodan > input[type="checkbox"]{
+    width: 15px;
+    height: 15px;
+    margin: 5px; 
+}
+
+/* 授权扣费 */
+#sqkf #danxuansp1{
+    color: rgb(64,158,255);
+}
+#sqkf .text{
+    font-size: 14px;
+    margin-left: 20px;
+    line-height: 15px;
+}
+#sqkf p{
+    margin: 20px 0;
+    color: rgb(96,98,102);
+}
+#sqkf input{
+    width: 15px;
+    height: 15px;
+    vertical-align:text-bottom;
+    margin-right: 5px;
+    margin-bottom: 2px;
+}
+#sqkf .text span{
+    display: inline-block;
+    line-height: 15px;
+    color: rgb(96,98,102);
+}
+
+/* 页面结算 */
+#over {
+    overflow: hidden;
+    position: relative;
+}
+#over .text{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+#over input{
+    width: 15px;
+    height: 15px;
+    margin: 10px;
+    margin-top: 30px;
+}
+#over span{
+    display: inline-block;
+    margin: 10px;
+}
+#over a{
+    font-size: 14px;
+}
+#over em{
+    font-style: normal;
+    color: rgb(64,158,255);
+}
+#over .money{
+    position: absolute;
+    font-size: 26px;
+
+    right: 60px;
+    top: 30px;
+}
+#over .money span{
+    display: inline-block;
+    margin: 30px 50px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+/* 页面底部 */
+#footer{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(240,240,240);
+
+    position: fixed;
+    bottom: 0;
+
+    padding: 20px 0;
+}
+#footer p{
+    display: inline-block;
+    font-size: 26px;
+    line-height: 26px;
+    color: rgb(255,102,0);
+    margin-left: 900px;
+}
+#footer button{
+    cursor: pointer;
+    width: 250px;
+    height: 50px;
+    font-size: 26px;
+    color: #fff;
+    background-color: rgb(255,102,0);
+    border: none;
+    border-radius: 5px;
+
+    margin-left: 25px;
+}
+
+/* --------------------------------------------------------- */
+/* 右边导航栏 */
+#rightnav{
+    background: #fff;
+    position: fixed;
+
+    right: 0;
+    top: 50%;
+}
+#rightnav ul li{
+    margin-top: 3px;
+    padding: 5px;
+    text-align: center;
+}
+#rightnav ul li a{
+    display: block;
+    color: rgb(103,103,103);
+    font-size: 14px;
+}
+#rightnav span{
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 1px auto;
+}
+#rightnav .span2{
+    background: url("../img2/right1.jpg");
+}
+#rightnav .span3{
+    background: url("../img2/robot.png")  no-repeat  center;
+}
+#rightnav .span4{
+    background: url("../img2/right3.jpg");
+}
+
+/* 左边导航栏 */
+#leftnav{
+    position: fixed;
+    top: 16%;
+    left: 60px;
+}
+#leftnav div{
+    width: 50px;
+    height: 50px;
+    font-size: 12px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    margin-top: 30px;
+    padding-top: 8px;
+    text-align:center;
+    background-color: white;
+    border: 1px solid rgb(255,102,0);
+
+    transition: 0.1s;
+}
+#leftnav div a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#leftnavxian{
+    position: fixed;
+    top: 20%;
+    left: 85px;
+}
+
+
+#leftnavxian div{
+    width: 1px;
+    height: 30px;
+    border-left: 1px dotted rgb(206, 207, 209);
+    margin-top: 50px;
+}
+
+/* tips */
+#tips{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 700px;
+    height: 200px;
+    background-color: white;
+    text-align: center;
+    z-index: 999999999999;
+    padding-top: 70px;
+
+
+    color: rgb(96,98,102);
+    font-size: 16px;
+    border-radius: 20px;
+}
+#tips span {
+    width: 100px;
+    padding: 10px 20px;
+    background-color: rgb(255,102,0);
+    border-radius: 15px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    margin: 5px auto;
+}
+#tips p{
+    margin: 15px;
+}
+#big{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(240,240,240,0.5);
+    position: fixed;
+    z-index: 9999999999999999;
+}
+#cha{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
